@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composelab.R
+import com.example.composelab.ui.screens.BankScreen
 import com.example.composelab.ui.screens.MainScreen
 
 enum class ComposeNavigation(@StringRes val title:Int){
@@ -37,7 +38,7 @@ fun AppNavigation(
                 )
             }
             composable(route = ComposeNavigation.Bank.name){
-
+                BankScreen()
             }
         }
     }
