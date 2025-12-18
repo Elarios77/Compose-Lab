@@ -19,7 +19,12 @@ The app features a **Main Hub (Menu)** that allows navigation to different, unre
 * **UI Toolkit:** Jetpack Compose (Material 3)
 * **Navigation:** Type-safe Navigation Compose (to switch between the showcase screens)
 
-## Screenshots will be added soon.
+## Screenshots
+<div align="center">
+    <img src="screenshots/BankScreen.png" width="250"/>
+    <img src="screenshots/InsuranceScreen.png" width="250"/>
+    <img src="screenshots/ScreenTimeScreen.png" width="250"/>
+    </div>
 
 ## 🔜 Upcoming Screens (Roadmap)
 
