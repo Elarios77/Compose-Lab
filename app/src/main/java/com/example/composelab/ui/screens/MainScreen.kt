@@ -2,7 +2,6 @@ package com.example.composelab.ui.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -51,7 +50,6 @@ fun MenuButton(text: String, onClick: () -> Unit) {
     Button(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth()
-            .height(50.dp)
             .padding(top = 8.dp),
         shape = RoundedCornerShape(12.dp)
     ) {

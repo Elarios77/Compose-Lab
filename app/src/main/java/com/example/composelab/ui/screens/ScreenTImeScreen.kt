@@ -1,6 +1,6 @@
 package com.example.composelab.ui.screens
 
-import android.widget.Space
+
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -17,14 +17,18 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.TrendingUp
 import androidx.compose.material.icons.filled.Face
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.StarRate
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.outlined.CalendarToday
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -52,12 +56,15 @@ val starColor = Color(0xFFE55B4B)
 @Composable
 fun ScreenTimeScreen(){
     Column(modifier = Modifier.fillMaxSize()
-        .background(color = backgroundColor))
+        .background(color = backgroundColor)
+        .verticalScroll(rememberScrollState()))
     {
         WelcomeBackBar()
         Spacer(modifier = Modifier.height(12.dp))
         ScreenTimeCard()
         FocusScore()
+        FocusSession()
+        Spacer(modifier = Modifier.height(24.dp))
     }
 }
 
@@ -109,7 +116,7 @@ fun WelcomeBackBar() {
 
 @Composable
 fun ScreenTimeCard() {
-    Card(shape = RoundedCornerShape(topStart = 70.dp, topEnd = 70.dp),
+    Card(shape = RoundedCornerShape(topStart = 45.dp, topEnd = 45.dp),
         colors = CardDefaults.cardColors(Color.White),
         modifier = Modifier.fillMaxWidth().height(400.dp))
     {
@@ -133,7 +140,7 @@ fun ScreenTimeCard() {
                     Text(
                         text = "Thu, June 20",
                         fontSize = 15.sp,
-                        modifier = Modifier.padding(8.dp)
+                        modifier = Modifier.padding(12.dp)
                     )
                 }
                 Surface(shape = CircleShape,
@@ -203,10 +210,10 @@ fun Stats(
 
 @Composable
 fun FocusScore() {
-    Card(shape = RoundedCornerShape(topStart = 70.dp, topEnd = 70.dp),
+    Card(shape = RoundedCornerShape(45.dp),
         colors = CardDefaults.cardColors(cardPeachColor),
-        modifier = Modifier.fillMaxWidth().height(300.dp)
-            .offset(y=(-120).dp))
+        modifier = Modifier.fillMaxWidth()
+            .offset(y=(-100).dp))
     {
         Column(modifier = Modifier.padding(24.dp))
         {
@@ -274,6 +281,64 @@ fun FocusScore() {
                     )
                 }
             }
+        }
+        Row(modifier = Modifier.padding(24.dp)
+            .fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceEvenly)
+        {
+            Box(
+                modifier = Modifier
+                    .border(width = 1.dp, color = Color.Black, shape = RoundedCornerShape(8.dp))
+                    .clip(RoundedCornerShape(10.dp))
+                    .size(30.dp)
+            ){
+                Icon(
+                    Icons.AutoMirrored.Filled.TrendingUp,
+                    contentDescription = null,
+                    modifier = Modifier.align(Alignment.Center)
+                )
+            }
+            Column(horizontalAlignment = Alignment.Start)
+            {
+                Text(text = "Way to go! Your screen time this week",
+                    color = Color.Black,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 15.sp)
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = "is 7% less than last week",
+                    color = Color.Black,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 15.sp)
+            }
+        }
+
+    }
+}
+
+@Composable
+fun FocusSession() {
+    Button(onClick = {},
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
+            .height(90.dp)
+            .offset(y=(-95).dp),
+        colors = ButtonDefaults.buttonColors(buttonCoral))
+    {
+        Column(horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center)
+        {
+            Text(
+                text = "Start Focus Session",
+                color = Color.Black,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "Last session: 2 hours ago",
+                color = Color.Black,
+
+            )
         }
     }
 }
