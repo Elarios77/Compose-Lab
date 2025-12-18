@@ -51,7 +51,8 @@ fun MenuButton(text: String, onClick: () -> Unit) {
     Button(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth()
-            .height(50.dp),
+            .height(50.dp)
+            .padding(top = 8.dp),
         shape = RoundedCornerShape(12.dp)
     ) {
         Text(text = text,
@@ -62,7 +63,7 @@ fun MenuButton(text: String, onClick: () -> Unit) {
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview(){
-    val mockScreens = listOf(ComposeNavigation.Main)
+    val mockScreens = listOf(ComposeNavigation.Main, ComposeNavigation.Bank)
     MainScreen(
         screens = mockScreens,
         onButtonClick = {}

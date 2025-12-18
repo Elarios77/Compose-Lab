@@ -11,6 +11,7 @@ The app features a **Main Hub (Menu)** that allows navigation to different, unre
 ## 🎨 Current Implementations
 
 ### 1. BankScreen
+### 2. ScreenTime (not finished yet)
 
 ## 🛠 Tech Stack
 * **Language:** Kotlin
