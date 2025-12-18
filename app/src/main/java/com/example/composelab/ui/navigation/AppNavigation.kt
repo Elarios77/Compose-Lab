@@ -11,13 +11,15 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composelab.R
 import com.example.composelab.ui.screens.BankScreen
+import com.example.composelab.ui.screens.InsuranceScreen
 import com.example.composelab.ui.screens.MainScreen
 import com.example.composelab.ui.screens.ScreenTimeScreen
 
 enum class ComposeNavigation(@StringRes val title:Int){
     Main(title = R.string.app_name),
     Bank(title = R.string.bankingUI),
-    ScreenTime(title =R.string.screenTime)
+    ScreenTime(title =R.string.screenTime),
+    Insurance(title = R.string.insurance)
 }
 
 @Composable
@@ -44,6 +46,9 @@ fun AppNavigation(
             }
             composable(route = ComposeNavigation.ScreenTime.name){
                 ScreenTimeScreen()
+            }
+            composable(route = ComposeNavigation.Insurance.name){
+                InsuranceScreen()
             }
         }
     }
