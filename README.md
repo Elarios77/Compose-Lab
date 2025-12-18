@@ -11,12 +11,15 @@ The app features a **Main Hub (Menu)** that allows navigation to different, unre
 ## 🎨 Current Implementations
 
 ### 1. BankScreen
-### 2. ScreenTime (not finished yet)
+### 2. ScreenTime 
+### 3. InsuranceScreen
 
 ## 🛠 Tech Stack
 * **Language:** Kotlin
 * **UI Toolkit:** Jetpack Compose (Material 3)
 * **Navigation:** Type-safe Navigation Compose (to switch between the showcase screens)
+
+## Screenshots will be added soon.
 
 ## 🔜 Upcoming Screens (Roadmap)
 
