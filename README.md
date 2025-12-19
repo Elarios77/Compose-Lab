@@ -13,6 +13,7 @@ The app features a **Main Hub (Menu)** that allows navigation to different, unre
 ### 1. BankScreen
 ### 2. ScreenTime 
 ### 3. InsuranceScreen
+### 4. TrackParcelScreen
 
 ## 🛠 Tech Stack
 * **Language:** Kotlin
@@ -24,6 +25,7 @@ The app features a **Main Hub (Menu)** that allows navigation to different, unre
     <img src="screenshots/BankScreen.png" width="250"/>
     <img src="screenshots/InsuranceScreen.png" width="250"/>
     <img src="screenshots/ScreenTimeScreen.png" width="250"/>
+    <img src="screenshots/TrackParcelScreen.png" width="250"/>
     </div>
 
 ## 🔜 Upcoming Screens (Roadmap)

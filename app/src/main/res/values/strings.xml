@@ -3,4 +3,5 @@
     <string name="bankingUI">Bank</string>
     <string name="screenTime">Screen Time</string>
     <string name="insurance">Insurance</string>
+    <string name="track">Track Parcel</string>
 </resources>

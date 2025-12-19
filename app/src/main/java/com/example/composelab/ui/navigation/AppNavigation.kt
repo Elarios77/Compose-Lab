@@ -14,12 +14,14 @@ import com.example.composelab.ui.screens.BankScreen
 import com.example.composelab.ui.screens.InsuranceScreen
 import com.example.composelab.ui.screens.MainScreen
 import com.example.composelab.ui.screens.ScreenTimeScreen
+import com.example.composelab.ui.screens.TrackParcelScreen
 
 enum class ComposeNavigation(@StringRes val title:Int){
     Main(title = R.string.app_name),
     Bank(title = R.string.bankingUI),
     ScreenTime(title =R.string.screenTime),
-    Insurance(title = R.string.insurance)
+    Insurance(title = R.string.insurance),
+    TrackParcel(title = R.string.track)
 }
 
 @Composable
@@ -49,6 +51,9 @@ fun AppNavigation(
             }
             composable(route = ComposeNavigation.Insurance.name){
                 InsuranceScreen()
+            }
+            composable(route = ComposeNavigation.TrackParcel.name){
+                TrackParcelScreen()
             }
         }
     }
